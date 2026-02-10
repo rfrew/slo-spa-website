@@ -59,15 +59,7 @@ export default function CartPage() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6">
                     {/* Product Image Placeholder */}
                     <div className="w-24 h-24 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center">
-                      {item.image ? (
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                      ) : (
-                        <ShoppingBag className="w-8 h-8 text-primary/40" />
-                      )}
+                      <ShoppingBag className="w-8 h-8 text-primary/40" />
                     </div>
 
                     {/* Product Details */}

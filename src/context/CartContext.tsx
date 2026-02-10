@@ -46,8 +46,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
       removeFromCart(id);
       return;
     }
+    const clampedQuantity = Math.min(quantity, 99);
     setItems((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, quantity } : item))
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: clampedQuantity } : item
+      )
     );
   };
 
